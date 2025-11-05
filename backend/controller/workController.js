@@ -1,6 +1,6 @@
-
-import { v2 as cloudinary } from 'cloudinary'
+import cloudinary from "../config/cloudinary.js";
 import Work from "../models/workModels.js";
+import path from "path";
 
 
 export const allWorks=async(req,res)=>{
@@ -9,7 +9,6 @@ export const allWorks=async(req,res)=>{
     res.json({success:true,works})
     
   } catch (error) {
-    console.log(error)
     res.json({success:false,message:error.message})
     
   }

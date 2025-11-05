@@ -7,7 +7,6 @@ import 'dotenv/config';
 
 import sendMessageRouter from './routes/sendMessage.js';
 import workRouter from './routes/workRoutes.js';
-import connectCloudinary from './config/cloudinary.js';
 
 
 const allowedOrigins=['http://localhost:5173']
@@ -31,7 +30,6 @@ app.use(express.json())
 app.use(cors({origin:allowedOrigins,credentials:true}))
 app.use(express.urlencoded({ extended: true }));
 
-connectCloudinary();
 
 //api endpoints
 app.use('/contact',sendMessageRouter);

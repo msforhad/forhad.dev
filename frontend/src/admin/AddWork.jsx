@@ -42,7 +42,10 @@ export default function AddWork() {
     try {
       const formData = new FormData();
       formData.append("name", name);
-      formData.append("technology",technology.split(",").map((t) => t.trim()));
+      formData.append(
+        "technology",
+        JSON.stringify(technology.split(",").map((t) => t.trim()))
+      );
       formData.append("shortDescription", shortDescription);
       formData.append("longDescription",JSON.stringify(longDescription));
       formData.append("image", coverImage);

@@ -41,14 +41,14 @@ export const addWork= async(req,res)=>{
 
 
    //upload image to cloudinary
-   const imageUpload = await cloudinary.uploader.upload(imageFile.path,{resource_type:'image'})
+   const imageUpload = await cloudinary.uploader.upload_stream(imageFile.buffer,imageFile.originalname, {resource_type:'image'})
    const imageUrl = imageUpload.secure_url
 
    // multiple screenshots upload
     const screenshotsUrls = [];
 
     for (const file of screenshotsFiles) {
-      const upload = await cloudinary.uploader.upload(file.path, {
+      const upload = await cloudinary.uploader.upload_stream(file.buffer,imageFile.originalname, {
         resource_type: "image",
       });
       screenshotsUrls.push(upload.secure_url);

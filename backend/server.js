@@ -38,7 +38,7 @@ app.use('/contact',sendMessageRouter);
 
 app.use("/api/works",workRouter);
 
-app.get('/',(req,res)=>{res.json("api working")})
+app.get('/',(req,res)=>{res.json("api working in forhad backend")})
 
 
 // MongoDB connection

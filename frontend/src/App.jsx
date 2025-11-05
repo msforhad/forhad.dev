@@ -11,7 +11,7 @@ import About from './pages/About.jsx';
 import Portfolio from './pages/Portfolio.jsx';
 import { useContext } from 'react';
 import { AppContext } from './context/AppContext.jsx';
-import ViewWorks from './pages/viewWorks.jsx';
+import ViewWorks from './pages/ViewWorks.jsx';
 import AddWork from './admin/AddWork.jsx';
 
 const App = ()=> {

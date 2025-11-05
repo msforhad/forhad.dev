@@ -9,7 +9,8 @@ import sendMessageRouter from './routes/sendMessage.js';
 import workRouter from './routes/workRoutes.js';
 
 
-const allowedOrigins=['http://localhost:5173']
+// const allowedOrigins=['http://localhost:5173']
+const allowedOrigins=['https://forhad-dev.onrender.com']
 
 
 

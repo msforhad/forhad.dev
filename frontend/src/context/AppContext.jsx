@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from 'react'
 import {techSkillsData, techToolsData,engToolsData,engSkillsData} from '../assets/SkillsData'
+import { myWorks } from '../assets/portfolioData';
 import axios from 'axios';
 
 
@@ -11,32 +12,12 @@ const AppContextProvider = (props) => {
   const [techTools, setTechTools] = useState(techToolsData);
   const [engSkilled, setEngSkilled] = useState(engToolsData);
   const [engTools, setEngTools] = useState(engSkillsData);
-  const [allWorks,setAllWorks]=useState([])
+
+  const [allWorks,setAllWorks]=useState(myWorks)
 
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
    axios.defaults.withCredentials=true;
 
-   //all work
- 
-
-   
-   useEffect(() => {
-     const fetchWorks = async () => {
-       try {
-         const { data } = await axios.get(
-           `${backendUrl}/api/works/allWorks`,
-           {}
-         );
-         if (data.success) {
-           setAllWorks(data.works);
-         }
-       } catch (err) {
-         console.error(err);
-       }
-     };
-
-     fetchWorks();
-   }, [backendUrl]);
 
 
  // techSkills control
@@ -44,6 +25,7 @@ const AppContextProvider = (props) => {
       const saveTechSkills = localStorage.getItem('techSkills');
       return saveTechSkills ? saveTechSkills : "techSkills";
     });
+
     useEffect(() => {
       localStorage.setItem("techSkills", techSkills);
     }, [techSkills]);
@@ -85,6 +67,7 @@ const AppContextProvider = (props) => {
     setEngSkills,
     backendUrl,
     allWorks,
+    setAllWorks,
   };
 
   return (

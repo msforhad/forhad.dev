@@ -31,7 +31,7 @@ const App = ()=> {
         <Route path="/contact" element={<Contact />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/portfolio/:id" element={<ViewWorks />} />            
+        <Route path="/portfolio/:name" element={<ViewWorks />} />            
         <Route path="/add-work/05101532" element={<AddWork />} />            
                    
       </Routes>

@@ -35,7 +35,7 @@ const Portfolio = () => {
                 <img
                   onClick={() =>
                     navigate(
-                      `/portfolio/${data._id
+                      `/portfolio/${data.name
                         .split(" ")
                         .join("-")
                         .toLowerCase()}`
@@ -50,7 +50,7 @@ const Portfolio = () => {
                 <img
                   onClick={() =>
                     navigate(
-                      `/portfolio/${data._id
+                      `/portfolio/${data.name
                         .split(" ")
                         .join("-")
                         .toLowerCase()}`
@@ -66,7 +66,7 @@ const Portfolio = () => {
               <img
                 onClick={() =>
                   navigate(
-                    `/portfolio/${data._id}`
+                    `/portfolio/${data.name.split(" ").join("-").toLowerCase()}`
                   )
                 }
                 className="aspect-auto object-cover mb-5 rounded cursor-pointer "
@@ -77,7 +77,7 @@ const Portfolio = () => {
               <img
                 onClick={() =>
                   navigate(
-                    `/portfolio/${data._id}`
+                    `/portfolio/${data.name.split(" ").join("-").toLowerCase()}`
                   )
                 }
                 className="aspect-auto object-cover mb-5 rounded cursor-pointer"

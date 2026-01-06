@@ -1,31 +1,28 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { NavLink, useParams } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
-import axios from 'axios';
+
 
 const ViewWorks = () => {
-  const {id}=useParams()
-
-  const { backendUrl } = useContext(AppContext);
-
-  const [work, setWork] = useState(null);
+  const {name}=useParams()
+  const {allWorks}=useContext(AppContext)
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setLoading(true);
-    axios
-      .get(`${backendUrl}/api/works/${id}`)
-      .then((res) => setWork(res.data.work))
-      .catch((err) => console.log(err))
-      .finally(() => setLoading(false));
 
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [id]);
+  const work = allWorks.find(
+    (item) => item.name.split(" ").join("-").toLowerCase() === name
+  );
   
 
   useEffect(()=>{
     scrollTo({ top: 0, behavior: "smooth" });
-  })
+  },[])
+
+  useEffect(() => {
+    if (allWorks && allWorks.length > 0) {
+      setLoading(false);
+    }
+  }, [allWorks]);
 
   if (loading) {
     return <p className="text-center py-10">Loading...</p>;

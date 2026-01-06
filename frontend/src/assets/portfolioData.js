@@ -29,7 +29,7 @@ const longDescription = [
 
 export const myWorks = [
   {
-    name:'Radiant',
+    name:'project one',
     technology: ['MongoDb','ReactJs','NodeJs','Express','TailwindCSS'],
     shortDescription:'We originally designed this for a SaaS we were going to build ourselves, but by the time we were done, we were over that idea. So we turned it into a template for you instead.',
     image:p1,

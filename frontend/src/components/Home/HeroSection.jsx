@@ -56,7 +56,7 @@ const HeroSection = () => {
               Md. Mehedi Hasan Forhad
             </p>
             <p className="outfit font-light text-gray-500">
-              Civil Engineer | Full-Stack Web Developer
+              Civil Engineering Student | Aspiring Web Developer
             </p>
             <p className="outfit text-xl  py-5 color-secondary text-center md:text-justify">
               We Design & Build Creative Products that combine innovation,

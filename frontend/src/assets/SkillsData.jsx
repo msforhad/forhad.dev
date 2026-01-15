@@ -21,6 +21,7 @@ import {
   SiVercel,
   SiAutocad,
   SiAutodeskrevit,
+  SiRender,
 } from "react-icons/si";
 
 
@@ -109,10 +110,16 @@ export const techToolsData = [
     icon: <SiPostman className="text-orange-600" />,
   },
   {
+    name: "Render",
+    level: "Beginner",
+    icon: <SiRender className="text-amber-500 " />,
+  },
+  
+  {
     name: "Vercel",
     level: "Beginner",
     icon: <SiVercel className="text-amber-500 " />,
-  }
+  },
 ];
 
 

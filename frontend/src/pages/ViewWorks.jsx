@@ -59,19 +59,24 @@ const ViewWorks = () => {
               </p>
             ))}
           </div>
-          <NavLink className="border-l py-5 md:py-0 border-primary flex items-center px-5">
+
+          <a
+            href={work.siteLink}
+            target='_blank'
+            className="border-l py-5 md:py-0 border-primary flex items-center px-5"
+          >
             <span className="border border-orange-500 rounded-full px-4 py-1.5 font-bold poppins hover:bg-orange-500 hover:text-white transition-all duration-300">
               Live Preview
             </span>
-          </NavLink>
+          </a>
         </div>
       </div>
 
       <div className="px-2 md:px-10 xl:px-30">
         <div className="p-5 border-l border-r border-primary">
           <img
-            className="aspect-3/2 object-cover rounded"
-            src={work.image}
+            className="aspect-auto object-cover rounded"
+            src={work.coverImage}
             alt=""
           />
         </div>
@@ -80,7 +85,9 @@ const ViewWorks = () => {
       <div className="border-t border-b border-primary px-2 md:px-10 xl:px-30  ">
         <div className="border-l border-r border-primary grid md:grid-cols-[30%66%] gap-[4%] pb-15 md:pb-0 ">
           <div className="border-b md:border-b-0 md:border-r border-primary h-full flex items-center">
-            <p className="px-5 font-bold text-2xl poppins py-5 md:py-0">What’s included</p>
+            <p className="px-5 font-bold text-2xl poppins py-5 md:py-0">
+              What’s included
+            </p>
           </div>
 
           <div className="border-l border-primary flex flex-col gap-10">
@@ -114,8 +121,8 @@ const ViewWorks = () => {
           <div className="border-l border-primary columns-1 md:columns-2 gap-5 p-5">
             {work.screenshots.map((data, index) => (
               <img
-              key={index}
-                className="mb-5 rounded aspect-3/2 object-cover"
+                key={index}
+                className="mb-5 rounded aspect-auto object-cover border-1 border-primary"
                 src={data}
                 alt=""
               />
@@ -138,12 +145,11 @@ const ViewWorks = () => {
               </p>
             </div>
             <div className="grid grid-cols-[49%49%] gap-[2%] p-5">
-              {
-                work.technology.map((tech,i)=>(
-                  <p key={i} className='py-2 font-bold outfit'>{tech}</p>
-                ))
-              }
-
+              {work.technology.map((tech, i) => (
+                <p key={i} className="py-2 font-bold outfit">
+                  {tech}
+                </p>
+              ))}
             </div>
           </div>
         </div>

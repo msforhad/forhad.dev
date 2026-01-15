@@ -13,7 +13,6 @@ const Skills = () => {
   return (
     <div className="bg-primary">
       <div className="mx-2 md:mx-30 2xl:mx-40 flex flex-col justify-between gap-30 py-10 md:py-20">
-
         {/* 1st section */}
         <div className=" grid grid-cols-1 md:grid-cols-[10%32%55%] gap-10 md:gap-[2%]">
           <div className="hidden md:flex flex-col gap-10 items-center justify-center ">
@@ -75,15 +74,15 @@ const Skills = () => {
         {/* 2nd section */}
         <div className=" grid grid-cols-1 md:grid-cols-[50%35%15%] gap-[5%] md:gap-0">
           <div className="hidden md:flex justify-end mr-10">
-            {engSkills === "engSkills" ? <EngSkilled /> : <EngTools />}
+            {engSkills === "engSkills" ? <EngTools />:<EngSkilled /> }
           </div>
 
           <div className="flex flex-col gap-10 justify-center items-center md:items-end">
             <div className="flex flex-col items-center md:items-end gap-5 font-bold color-primary outfit">
               <p className="text-4xl">What My</p>
               <p className=" text-4xl text-end">
-                <span className="text-orange-500">Engineering</span> Skills
-                Included?
+                <span className="text-orange-500">Academic</span>{" "}
+                Skills Included?
               </p>
 
               <p className="roboto color-secondary text-center md:text-end">
@@ -123,9 +122,9 @@ const Skills = () => {
             </div>
           </div>
 
-          <div className="md:hidden justify-end">
-            {engSkills === "engSkills" ? <EngSkilled /> : <EngTools />}
-          </div>
+          { <div className="md:hidden justify-end">
+            {engSkills === "engSkills" ? <EngTools />: <EngSkilled />}
+          </div>}
 
           <div className="hidden md:flex flex-col gap-15 items-center justify-center">
             <p className="rotate-90 tracking-[3px] font-bold uppercase color-primary ">

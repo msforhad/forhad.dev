@@ -1,4 +1,4 @@
-import assets from "../assets/image/logo-2xl.png";
+import assets from "../assets/image/logo-2.png";
 import Qualification from "../components/Qualification";
 
 const About = () => {
@@ -51,7 +51,7 @@ const About = () => {
           </div>
         </div>
         <div className="">
-          <img className="" src={assets} alt="" />
+          <img className="border-5 border-white rounded-full" src={assets} alt="" />
         </div>
       </div>
       <Qualification></Qualification>

@@ -43,7 +43,7 @@ const Portfolio = () => {
                   }
                   className="aspect-auto object-cover mb-5 rounded cursor-pointer"
                   key={index}
-                  src={data.image}
+                  src={data.coverImage}
                   alt=""
                 />
               ) : (
@@ -58,7 +58,7 @@ const Portfolio = () => {
                   }
                   className="aspect-auto object-cover mb-5 rounded cursor-pointer"
                   key={index}
-                  src={data.image}
+                  src={data.coverImage}
                   alt=""
                 />
               )
@@ -70,7 +70,7 @@ const Portfolio = () => {
                   )
                 }
                 className="aspect-auto object-cover mb-5 rounded cursor-pointer "
-                src={data.image}
+                src={data.coverImage}
                 alt=""
               />
             ) : (
@@ -81,7 +81,7 @@ const Portfolio = () => {
                   )
                 }
                 className="aspect-auto object-cover mb-5 rounded cursor-pointer"
-                src={data.image}
+                src={data.coverImage}
                 alt=""
               />
             )
